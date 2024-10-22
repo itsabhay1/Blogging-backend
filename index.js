@@ -76,6 +76,10 @@ app.delete('/blog/:id', async(req,res) => {
     }
 })
 
+app.get("/",async(req,res) => {
+    res.send("hello from server 8000")
+})
+
 mongoose.connect(process.env.DB_URI).then((result) => {
     console.log(result);
     app.listen(port, () => {
